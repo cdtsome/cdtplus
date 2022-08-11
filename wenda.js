@@ -1,5 +1,7 @@
 //允许复制
-function t(e){e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation()}document.querySelectorAll('*').forEach(e=>{'none'===window.getComputedStyle(e,null).getPropertyValue('user-select')&&e.style.setProperty('user-select','text','important')}),['copy','cut','contextmenu','selectstart','mousedown','mouseup','mousemove','keydown','keypress','keyup'].forEach(function(e){document.documentElement.addEventListener(e,t,{capture:!0})});
+if (location.href.search('wenda.codingtang.com/questions/ask') == -1) {
+	function t(e){e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation()}document.querySelectorAll('*').forEach(e=>{'none'===window.getComputedStyle(e,null).getPropertyValue('user-select')&&e.style.setProperty('user-select','text','important')}),['copy','cut','contextmenu','selectstart','mousedown','mouseup','mousemove','keydown','keypress','keyup'].forEach(function(e){document.documentElement.addEventListener(e,t,{capture:!0})});
+}
 //增强搜索
 if (location.href.search('wenda.codingtang.com/search') != -1) {
 	function getQueryString(name) {
