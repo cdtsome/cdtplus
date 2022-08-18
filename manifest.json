@@ -1,15 +1,22 @@
 {
 	"manifest_version": 3,
 	"name": "Codingtang plus",
-	"version": "1.0.1", 
+	"version": "1.2.2", 
 	"content_scripts": [
 		{
-			"matches": ["https://ke.codingtang.com/"],
+			"matches": [
+				"https://ke.codingtang.com/",
+				"https://newcourse.codingtang.com/*"
+			],
 			"js": ["jquery.min.js", "ke.js"]
 		}, 
 		{
 			"matches": ["https://wenda.codingtang.com/*"],
 			"js": ["jquery.min.js", "wenda.js"]
+		}, 
+		{
+			"matches": ["https://kuding1024.com/*"],
+			"js": ["jquery.min.js", "dev.js"]
 		}
 	]
 }
