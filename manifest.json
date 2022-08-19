@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Codingtang plus",
-	"version": "1.2.2", 
+	"version": "2.0.0", 
 	"content_scripts": [
 		{
 			"matches": [
@@ -18,5 +18,31 @@
 			"matches": ["https://kuding1024.com/*"],
 			"js": ["jquery.min.js", "dev.js"]
 		}
-	]
+	],
+	"action": {
+		"default_icon": "icon.png", 
+		"default_title": "Codingtang plus", 
+		"default_popup": "popup.html"
+	}, 
+	"icons": {
+		"16": "icon.png", 
+		"32": "icon.png", 
+		"48": "icon.png", 
+		"128": "icon.png"
+	}, 
+	"homepage_url": "https://github.com/xgugugu/cdtplus/", 
+	"options_page": "options.html",
+	"web_accessible_resources": [{
+		"resources": [
+			"jquery.min.js", 
+			"semantic.min.js", 
+			"semantic.min.css", 
+			"popup.js", 
+			"options.js"
+		], 
+		"matches": ["<all_urls>"]
+	}], 
+	"permissions": [
+		"storage"
+    ]
 }

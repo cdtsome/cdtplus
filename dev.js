@@ -40,12 +40,21 @@ function add_event() {
 		}
 	});
 }
-add_event();
-var observer = new MutationObserver(function() {
+function check_run(id, callback) {
+	chrome.storage.sync.get(id, function(res) {
+		if (res[id] != 'false') {
+			callback();
+		}
+	});
+}
+check_run('dev自动识别验证码', function() {
 	add_event();
-});
-observer.observe(document.body, {
-	attributes: true, 
-	childList: true, 
-	subtree: true 
+	var observer = new MutationObserver(function() {
+		add_event();
+	});
+	observer.observe(document.body, {
+		attributes: true, 
+		childList: true, 
+		subtree: true 
+	});
 });
